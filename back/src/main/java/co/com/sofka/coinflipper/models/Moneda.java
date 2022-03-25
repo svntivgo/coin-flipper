@@ -59,7 +59,7 @@ public class Moneda {
       return false;
     if (getClass() != obj.getClass())
       return false;
-    Coin other = (Coin) obj;
+    Moneda other = (Moneda) obj;
     if (fecha == null) {
       if (other.fecha != null)
         return false;
