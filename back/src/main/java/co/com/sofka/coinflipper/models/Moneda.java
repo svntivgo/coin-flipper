@@ -19,7 +19,6 @@ public class Moneda {
 
   public Boolean girar() {
     Double numero = Math.floor(Math.random() * 2) + 1 ;
-    System.out.println(numero);
     return numero > 1 ? false : true;
   }
 
