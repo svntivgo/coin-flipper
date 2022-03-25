@@ -12,9 +12,15 @@ public class Moneda {
   private LocalDate fecha;
   private Boolean ladoMoneda;
 
-  public Moneda(Boolean ladoMoneda) {
+  public Moneda() {
     this.fecha = LocalDate.now();
-    this.ladoMoneda = ladoMoneda;
+    this.ladoMoneda = girar();
+  }
+
+  public Boolean girar() {
+    Double numero = Math.floor(Math.random() * 2) + 1 ;
+    System.out.println(numero);
+    return numero > 1 ? false : true;
   }
 
   public String getId() {
