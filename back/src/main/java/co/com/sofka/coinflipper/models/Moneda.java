@@ -5,15 +5,15 @@ import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("coins")
-public class Coin {
+@Document("monedas")
+public class Moneda {
   @Id
   private String id;
   private LocalDate fecha;
   private Boolean ladoMoneda;
 
-  public Coin(LocalDate fecha, Boolean ladoMoneda) {
-    this.fecha = fecha;
+  public Moneda(Boolean ladoMoneda) {
+    this.fecha = LocalDate.now();
     this.ladoMoneda = ladoMoneda;
   }
 
