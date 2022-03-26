@@ -21,7 +21,7 @@ public class MonedaController {
 
   @PostMapping("/girar-moneda")
   @ResponseStatus(HttpStatus.OK)
-  public Mono<Moneda> girarMoneda () {
+  public Boolean girarMoneda () {
     return monedaService.girarMoneda();
   }
 }

@@ -12,8 +12,9 @@ public class MonedaService {
   @Autowired
   MonedaRepository monedaRepo;
 
-  public Mono<Moneda> girarMoneda () {
+  public Boolean girarMoneda () {
     Moneda moneda = new Moneda();
-    return monedaRepo.save(moneda);
+    monedaRepo.save(moneda);
+    return moneda.getLadoMoneda();
   }
 }
