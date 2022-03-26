@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import co.com.sofka.coinflipper.models.Moneda;
 import co.com.sofka.coinflipper.repositories.MonedaRepository;
-import reactor.core.publisher.Mono;
 
 @Service
 public class MonedaService {
