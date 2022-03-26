@@ -1,5 +1,7 @@
 # coin-flipper
 
+![2022-03-26 01-10-04](https://user-images.githubusercontent.com/78881695/160227290-2e85ef56-aa50-4856-a2d3-668006b1c846.gif)
+
 App sin iniciar
 
 ![image](https://user-images.githubusercontent.com/78881695/160227048-553ba390-0c73-420d-9630-9d10d70d10eb.png)
