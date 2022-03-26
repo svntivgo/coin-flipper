@@ -1,5 +1,4 @@
 export const fetchTirarMoneda = (state) => (dispatch) => {
-  // dispatch({ type: "view-loading" });
 
   return fetch(`http://localhost:8080/app/girar-moneda`, {
     method: "POST",
@@ -11,7 +10,7 @@ export const fetchTirarMoneda = (state) => (dispatch) => {
     .then((response) => response.json())
     .then((json) => {
       console.log(json)
+      json ? dispatch({ type: "cara" }) : dispatch({ type: "sello" });
       // dispatch({ type: "random-result", data: json });
-      // dispatch({ type: "view-loaded" });
     });
 };
