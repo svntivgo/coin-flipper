@@ -5,15 +5,15 @@ import org.springframework.stereotype.Service;
 
 import co.com.sofka.coinflipper.models.Moneda;
 import co.com.sofka.coinflipper.repositories.MonedaRepository;
+import reactor.core.publisher.Mono;
 
 @Service
 public class MonedaService {
   @Autowired
   MonedaRepository monedaRepo;
 
-  public Boolean girarMoneda () {
+  public Mono<Moneda> girarMoneda () {
     Moneda moneda = new Moneda();
-    monedaRepo.save(moneda);
-    return moneda.getLadoMoneda();
+    return monedaRepo.save(moneda);
   }
 }

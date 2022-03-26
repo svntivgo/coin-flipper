@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import co.com.sofka.coinflipper.models.Moneda;
 import co.com.sofka.coinflipper.services.MonedaService;
+import reactor.core.publisher.Mono;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
@@ -19,7 +21,7 @@ public class MonedaController {
 
   @PostMapping("/girar-moneda")
   @ResponseStatus(HttpStatus.OK)
-  public Boolean girarMoneda () {
+  public Mono<Moneda> girarMoneda () {
     return monedaService.girarMoneda();
   }
 }
