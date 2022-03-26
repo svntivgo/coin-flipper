@@ -10,16 +10,16 @@ public class Moneda {
   @Id
   private String id;
   private LocalDate fecha;
-  private Boolean ladoMoneda;
+  private Double ladoMoneda;
 
   public Moneda() {
     this.fecha = LocalDate.now();
     this.ladoMoneda = girar();
   }
 
-  public Boolean girar() {
+  public Double girar() {
     Double numero = Math.floor(Math.random() * 2) + 1 ;
-    return numero > 1 ? false : true;
+    return numero;
   }
 
   public String getId() {
@@ -38,11 +38,11 @@ public class Moneda {
     this.fecha = fecha;
   }
 
-  public Boolean getLadoMoneda() {
+  public Double getLadoMoneda() {
     return ladoMoneda;
   }
 
-  public void setLadoMoneda(Boolean ladoMoneda) {
+  public void setLadoMoneda(Double ladoMoneda) {
     this.ladoMoneda = ladoMoneda;
   }
 
@@ -82,4 +82,6 @@ public class Moneda {
       return false;
     return true;
   }
+
+
 }
