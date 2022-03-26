@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { From } from "./components/From";
 import { Fragment, React } from "react";
